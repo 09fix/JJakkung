@@ -1,12 +1,9 @@
-# React + Vite
+# JJakkung
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## "결혼을 계획하고 계신가요? 필요한 모든 정보와 준비 과정을 '짝꿍'과 함께하세요!"
 
-Currently, two official plugins are available:
+### '짝꿍'은 결혼 관련 정보를 얻고, 일정을 체크하는 홈페이지입니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### 벤치마킹: 가연(https://www.gayeon.com/main/main.asp)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##### NavBar
