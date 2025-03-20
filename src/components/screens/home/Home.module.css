@@ -9,7 +9,7 @@
 }
 
 .container {
-  background-image: url("../../assets/mainImg.jpg");
+  background-image: url("../../../assets/mainImg.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;

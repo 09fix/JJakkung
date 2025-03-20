@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Link 컴포넌트 추가
+import { Link } from "react-router-dom";
 import { WeddingInfoMenu, weddingInfoMenuItems } from "./WeddingInfoMenu";
 import styles from "./MainMenu.module.css";
+import homeIcon from "../../assets/homeIcon.jpg";
 
 function MainMenu() {
   const mainMenuItems = [
+    { name: "홈", path: "/home", icon: homeIcon },
     { name: "짝꿍", path: "/jjakkung" },
     { name: "우리의 일정", path: "/schedule" },
     { name: "다른 이의 일정", path: "/other-schedule" },
     { name: "결혼정보", path: "/wedding-info" },
-    { name: "데이트정보", path: "/dating-info" }, // 예시 추가
+    { name: "데이트정보", path: "/dating-info" },
     { name: "커뮤니티", path: "/community" },
     { name: "로그인", path: "/login" },
   ];
@@ -35,6 +37,7 @@ function MainMenu() {
             }`}
             onMouseEnter={() => handleMouseEnter(item.name)}
             onMouseLeave={handleMouseLeave}
+            style={item.name === "결혼정보" ? { position: "relative" } : {}}
           >
             <Link
               to={item.path}
@@ -42,7 +45,15 @@ function MainMenu() {
                 item.name === "로그인" ? styles.loginLink : ""
               }`}
             >
-              {item.name}
+              {item.name === "홈" ? (
+                <img
+                  src={item.icon}
+                  alt="홈 아이콘"
+                  className={styles.homeIcon}
+                />
+              ) : (
+                item.name
+              )}
             </Link>
             {item.name === "결혼정보" && hoveredMenu === "결혼정보" && (
               <ul className={styles.subMenu}>

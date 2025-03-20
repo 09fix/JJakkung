@@ -2,14 +2,14 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Home from "./components/home/Home.jsx";
-import Jjakkung from "./components/jjakkung/Jjakkung";
-import Schedule from "./components/screens/Schedule";
-import OtherSchedule from "./components/screens/OtherSchedule";
-import WeddingInfo from "./components/screens/WeddingInfo";
-import DatingInfo from "./components/screens/DatingInfo";
-import Community from "./components/screens/Community";
-import Login from "./components/screens/Login";
+import Home from "./components/screens/home/Home.jsx";
+import Jjakkung from "./components/screens/jjakkung/Jjakkung.jsx";
+import Schedule from "./components/screens/schedule/Schedule.jsx";
+import OtherSchedule from "./components/screens/otherSchedule/OtherSchedule.jsx";
+import WeddingInfo from "./components/screens/weddingInfo/WeddingInfo.jsx";
+import DatingInfo from "./components/screens/datingInfo/DatingInfo.jsx";
+import Community from "./components/screens/community/Community.jsx";
+import Login from "./components/screens/login/Login.jsx";
 
 import MainMenu from "./components/menu/MainMenu";
 import Footer from "./components/footer/Footer";
@@ -21,6 +21,7 @@ function App() {
       <div className="screen">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/jjakkung" element={<Jjakkung />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/other-schedule" element={<OtherSchedule />} />
