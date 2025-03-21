@@ -21,7 +21,7 @@ function App() {
       <div className="screen">
         <Routes>
           <Route path="/" element={<Jjakkung />} />
-          <Route path="/home" element={<Jjakkung />} />
+          <Route path="/Jjakkung" element={<Jjakkung />} />
           <Route path="/description" element={<Description />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/other-schedule" element={<OtherSchedule />} />
