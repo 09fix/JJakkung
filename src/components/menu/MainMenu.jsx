@@ -6,8 +6,8 @@ import homeIcon from "../../assets/homeIcon.jpg";
 
 function MainMenu() {
   const mainMenuItems = [
-    { name: "홈", path: "/home", icon: homeIcon },
-    { name: "짝꿍", path: "/jjakkung" },
+    { name: "홈", path: "/jjakkung", icon: homeIcon },
+    { name: "짝꿍", path: "/description" },
     { name: "우리의 일정", path: "/schedule" },
     { name: "다른 이의 일정", path: "/other-schedule" },
     { name: "결혼정보", path: "/wedding-info" },
