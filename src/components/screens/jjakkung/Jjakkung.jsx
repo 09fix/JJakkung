@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Home.module.css";
 
-function Home() {
+function Jjakkung() {
   return (
     <div className={style.container}>
       <h1>영원한 내 짝꿍</h1>
@@ -10,4 +10,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Jjakkung;
