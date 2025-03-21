@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Home from "./components/screens/home/Home.jsx";
-import Jjakkung from "./components/screens/jjakkung/Jjakkung.jsx";
+import Jjakkung from "./components/screens/description/Description.jsx";
 import Schedule from "./components/screens/schedule/Schedule.jsx";
 import OtherSchedule from "./components/screens/otherSchedule/OtherSchedule.jsx";
 import WeddingInfo from "./components/screens/weddingInfo/WeddingInfo.jsx";
@@ -22,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/jjakkung" element={<Jjakkung />} />
+          <Route path="/description" element={<Description />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/other-schedule" element={<OtherSchedule />} />
           <Route path="/wedding-info" element={<WeddingInfo />} />

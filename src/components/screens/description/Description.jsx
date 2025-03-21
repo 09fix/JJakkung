@@ -1,7 +1,7 @@
 import React from "react";
-import style from "./Jjakkung.module.css";
+import style from "./Description.module.css";
 
-function Jjakkung() {
+function Description() {
   return (
     <div className={style.container}>
       <h1>짝꿍은 어떤 사이트인가요?</h1>
@@ -13,4 +13,4 @@ function Jjakkung() {
   );
 }
 
-export default Jjakkung;
+export default Description;
