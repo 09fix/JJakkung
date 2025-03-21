@@ -5,6 +5,9 @@ import styles from "./MainMenu.module.css";
 import homeIcon from "../../assets/homeIcon.jpg";
 
 function MainMenu() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [hoveredMenu, setHoveredMenu] = useState(null);
+
   const mainMenuItems = [
     { name: "홈", path: "/jjakkung", icon: homeIcon },
     { name: "짝꿍", path: "/description" },
@@ -16,18 +19,19 @@ function MainMenu() {
     { name: "로그인", path: "/login" },
   ];
 
-  const [hoveredMenu, setHoveredMenu] = useState(null);
-
-  const handleMouseEnter = (item) => {
-    setHoveredMenu(item);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredMenu(null);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${menuOpen ? styles.active : ""}`}>
+      {/* 햄버거 메뉴 버튼 */}
+      <div className={styles.hamburger} onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <ul className={styles.menu}>
         {mainMenuItems.map((item) => (
           <li
@@ -35,16 +39,10 @@ function MainMenu() {
             className={`${styles.menuItem} ${
               item.name === "로그인" ? styles.loginMenu : ""
             }`}
-            onMouseEnter={() => handleMouseEnter(item.name)}
-            onMouseLeave={handleMouseLeave}
-            style={item.name === "결혼정보" ? { position: "relative" } : {}}
+            onMouseEnter={() => setHoveredMenu(item.name)}
+            onMouseLeave={() => setHoveredMenu(null)}
           >
-            <Link
-              to={item.path}
-              className={`${styles.link} ${
-                item.name === "로그인" ? styles.loginLink : ""
-              }`}
-            >
+            <Link to={item.path} className={styles.link}>
               {item.name === "홈" ? (
                 <img
                   src={item.icon}
@@ -58,7 +56,11 @@ function MainMenu() {
             {item.name === "결혼정보" && hoveredMenu === "결혼정보" && (
               <ul className={styles.subMenu}>
                 {weddingInfoMenuItems.map((menuItem) => (
-                  <WeddingInfoMenu key={menuItem} title={menuItem} />
+                  <WeddingInfoMenu
+                    key={menuItem}
+                    title={menuItem}
+                    isHovered={hoveredMenu === "결혼정보"}
+                  />
                 ))}
               </ul>
             )}
